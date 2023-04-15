@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <style>
+        /* Add custom CSS styles for formatting */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        input[type="text"]#grossFloorArea {
+            width: calc(100% - 16px); /* Subtract 16px for padding */
+        }
+        input[type="text"]#pointsAchieved {
+            width: calc(100% - 16px); /* Subtract 16px for padding */
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input Form</h1>
+    <form id="inputForm" action="/predict" method="post">
+        <label for="grossFloorArea">Gross Floor Area:</label>
+        <input type="text" id="grossFloorArea" name="grossFloorArea" placeholder="Enter gross floor area">
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="" selected disabled>Please select a state</option>
+            <option value="PA">PA</option>
+            <option value="state2">State 2</option>
+            <option value="state3">State 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <label for="ownerTypes">Owner Types:</label>
+        <select id="ownerTypes" name="ownerTypes" placeholder="Select owner type">
+            <option value="">Select owner type</option>
+            <option value="Others">Others</option>
+            <option value="ownerType2">Owner Type 2</option>
+            <option value="ownerType3">Owner Type 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <label for="projectTypes">Project Types:</label>
+        <select id="projectTypes" name="projectTypes" placeholder="Select project type">
+            <option value="">Select project type</option>
+            <option value="Others">Others</option>
+            <option value="projectType2">Project Type 2</option>
+            <option value="projectType3">Project Type 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        <input type="submit" value="Predict Cert Level">
+    </form>
+    <h2>Prediction Result:</h2>
+    <p id="prediction_result">{{ prediction }}</p> 
+    <script src="script.js"></script> 
+</html>

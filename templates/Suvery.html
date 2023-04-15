@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LEED Certification Trends Survey</title>
+    <style>
+        body {
+            background-color: #F3EFEF;
+            font-family: Arial, sans-serif;
+        }
+
+        .survey-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #007BFF; /* Added color component */
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-group button[type="submit"] {
+            background-color: #007BFF;
+            color: #FFF;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Added color transition effect */
+        }
+
+        .form-group button[type="submit"]:hover {
+            background-color: #0056b3; /* Updated hover color */
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+            resize: vertical;
+        }
+    </style>
+    </head>
+</head>
+<body>
+  <h1>LEED Certification Survey</h1>
+  <form action="/submit" method="post">
+    <p>1. Before interacting with the visual, how would you describe your familiarity with LEED certifications and the factors that influence whether a project can get certified or not?</p>
+    <input type="radio" name="familiarity" value="very_familiar"> Very familiar<br>
+    <input type="radio" name="familiarity" value="somewhat_familiar"> Somewhat familiar<br>
+    <input type="radio" name="familiarity" value="not_familiar"> Not familiar at all<br><br>
+
+    <p>2. Do you feel you learned about LEED trends when you interacted with the dashboard?</p>
+    <input type="radio" name="learned_trends" value="yes"> Yes<br>
+    <input type="radio" name="learned_trends" value="no"> No<br>
+    <input type="radio" name="learned_trends" value="maybe"> Maybe<br><br>
+
+    <p>3. Part of the goal of this project was to help introduce the general public to LEED certification trends in the US. How much did the dashboard help you to get insights into LEED certification trends?</p>
+    <input type="radio" name="insights" value="great_deal"> A great deal<br>
+    <input type="radio" name="insights" value="somewhat"> Somewhat<br>
+    <input type="radio" name="insights" value="not_at_all"> Not at all<br><br>
+
+    <p>4. How close are the insights and predictions provided by the application to your expectations?</p>
+    <input type="radio" name="closeness" value="very_close"> Very close<br>
+    <input type="radio" name="closeness" value="somewhat_close"> Somewhat close<br>
+    <input type="radio" name="closeness" value="not_at_all"> Not at all<br><br>
+
+    <p>5. How easy was it to interact with the application?</p>
+    <input type="radio" name="ease_of_interaction" value="very_easy"> Very easy<br>
+    <input type="radio" name="ease_of_interaction" value="somewhat_easy"> Somewhat easy<br>
+    <input type="radio" name="ease_of_interaction" value="not_easy"> Not easy at all<br><br>
+
+    <p>6. How would you rate your overall experience with the web application, on a scale of 1 to 10, 1 being not good to 10 being the best?</p>
+    <input type="number" name="overall_experience" min="1" max="10"><br><br>
+
+    <p>7. If you are pursuing LEED certification, how likely are you to use this tool as a starting point for your initiative?</p>
+    <input type="radio" name="likelihood_use" value="very_likely"> Very likely<br>
+    <input type="radio" name="likelihood_use" value="somewhat_likely"> Somewhat likely<br>
+    <input type="radio" name="likelihood_use" value="not_likely"> Not likely at all<br><br>
+
+    <p>8. How important are LEED certifications to you or your organization?</p>
+    <input type="radio" name="importance" value="very_important"> Very important<br>
+    <input type="radio" name="importance" value="somewhat_important"> Somewhat important<br>
+    <input type="radio" name="importance" value="not_important"> Not important at all<br><br>
+    
+    <p>9. Do you have any feedback or suggestions for improving the LEED certification trends dashboard?</p>
+    <textarea name="feedback" rows="5" cols="30"></textarea><br><br>
+    
+    <p>10. Are you interested in receiving updates about LEED certification trends or related projects in the future?</p>
+    <input type="radio" name="interest_updates" value="yes"> Yes<br>
+    <input type="radio" name="interest_updates" value="no"> No<br>
+    <input type="radio" name="interest_updates" value="maybe"> Maybe<br><br>
+    
+    <p>11. Please provide your email address if you would like to receive updates:</p>
+    <input type="email" name="email" placeholder="example@example.com"><br><br>
+    
+    <input type="submit" value="Submit">
+    </form>
+    </body>
+    </html>
